@@ -22,13 +22,13 @@
 			<button ion-button block outline>{{data.alias}}</button>
 		</ion-item>
 
-<ion-item *ngFor="let data of jsonData" (click)="selectPayee(wallet)">
+		<ion-item *ngFor="let data of jsonData" (click)="selectPayee(wallet)">
 
-        <ion-thumbnail item-left >
-          <img class="icons" src="" >
+			<ion-thumbnail item-left>
+				<img class="icons" src="" >
         </ion-thumbnail>
-        <h2> {{data.alias}}:{{data.type}}</h2>
-</ion-item>
+				<h2> {{data.alias}}:{{data.type}}</h2>
+		</ion-item>
 	</ion-list>
 
 </ion-content>
