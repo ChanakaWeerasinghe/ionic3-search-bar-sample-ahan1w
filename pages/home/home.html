@@ -1,0 +1,28 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Home</ion-title>
+		<ion-searchbar #searchBar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()"></ion-searchbar>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	<ion-toolbar>
+		<ion-buttons end>
+			<button  ion-button block outline item-right color="danger" (click)="refreshData()">
+       <ion-icon name="add">Add Payee</ion-icon>
+       </button>
+		</ion-buttons>
+		<ion-searchbar [showCancelButton]="shouldShowCancel" placeholder="Search Payees" [(ngModel)]="searchTerm"
+			(ionInput)="setFilteredItems()" (ionCancel)="onCancel($event)">
+		</ion-searchbar>
+	</ion-toolbar>
+	<ion-list>
+		<ion-item *ngFor="let data of jsonData">
+			<button ion-button block outline>{{data.alias}}</button>
+		</ion-item>
+
+
+	</ion-list>
+
+</ion-content>
