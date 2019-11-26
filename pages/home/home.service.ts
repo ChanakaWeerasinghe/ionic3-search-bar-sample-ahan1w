@@ -31,7 +31,7 @@ export class Data {
       {
         payeeID: "423",
         type: "wallet",
-        alias: "Chankaa Lakmal",
+        alias: "Chanka Lakmal",
         wallet: {},
         account: null
       },
